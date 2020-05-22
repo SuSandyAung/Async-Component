@@ -1,0 +1,182 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap');
+// Variables
+@import 'variables';
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+$main-font:'M PLUS 1p',
+sans-serif;
+$logofont:30px;
+$mainheaderfont: 20px;
+$headerfont: 18px;
+$textfont: 12px;
+$padding: 15px;
+$border:10px;
+$borderradius1:25px;
+$borderradius2:3px;
+$bordercolor:#e7e7e7;
+$colors:( primary: #004bb1,
+primary-ligtht:#1A74C0,
+primary-dark:#233977,
+accent: #fff6bb,
+second:#FB8C00,
+secondary-light:#a5a5a5,
+text-color:#000,
+errorcolor:red);
+@function color($color-name) {
+    @return map-get($colors,
+    $color-name)
+}
+
+$desktop: 840px;
+@mixin desktop {
+    @media(min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fefefe;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navbar-header {
+            float: left;
+        }
+        .logo {
+            padding: 15px 15px;
+            font-size: $logofont;
+            color: color(primary);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .sub-brand {
+            color: color(secondary-light);
+            margin-bottom: 0px;
+            margin-top: -20px;
+        }
+        nav {
+            position: relative;
+            ul.nav_links {
+                list-style: none;
+                li {
+                    display: inline-block;
+                    padding: 0 20px;
+                }
+            }
+        }
+        .attr-nav {
+            // float: right;
+            display: inline-block;
+            margin-left: 40px;
+            margin-right: 0px;
+        }
+        a {
+            display: inline-block;
+            // margin: 20px 0 0 0;
+            padding: 5px 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: $borderradius2;
+        }
+        .member {
+            border: 2px solid color(primary);
+            color: color(primary);
+        }
+        .login {
+            border: 2px solid color(second);
+            color: color(second);
+        }
+    }
+    /*innerbanner*/
+    .inner-banner {
+        display: block;
+        background: url(/images/bg.png) no-repeat center 0;
+        height: 300px;
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px 0px;
+            .advanced-search {
+                background-color: #fff;
+                padding: 16px;
+                border-radius: 3px;
+                outline: none;
+                max-width: 960px;
+                .searchdiv {
+                    display: table;
+                    width: 100%;
+                    border: 1px solid #CCCCCC;
+                    background: #fff;
+                    border-radius: 4px;
+                    padding: 20px 19px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+    /*bootnav*/
+    .bootsnav {
+        border-radius: 0px;
+        background-color: #fff;
+        border: none;
+        border-bottom: solid 1px #e0e0e0;
+        .container {
+            position: relative;
+            .attr-nav {
+                float: right;
+            }
+            .navbar-header {
+                float: left;
+                .navbar-brand {
+                    width: 260px;
+                    padding: 15px 15px;
+                    font-size: $logofont;
+                    color: color(primary);
+                    font-weight: bold;
+                }
+                .sub-brand {
+                    color: #a5a5a5;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    .content {
+        line-height: 1.3;
+        padding-top: 2px;
+        position: relative;
+        padding-left: 12px;
+        margin-bottom: 19px;
+        .card-title {
+            color: #333333;
+            font-weight: bold;
+            font-size: $headerfont;
+        }
+        &:before {
+            content: "";
+            width: 4px;
+            height: 25px;
+            background-color: color(primary-ligtht);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:after {
+            content: "";
+            width: 4px;
+            height: 12.5px;
+            background-color: color(primary-dark);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}

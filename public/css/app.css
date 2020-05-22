@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap);* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fefefe;
+  /*innerbanner*/
+  /*bootnav*/
+}
+
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body header .navbar-header {
+  float: left;
+}
+
+body header .logo {
+  padding: 15px 15px;
+  font-size: 30px;
+  color: #004bb1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body header .sub-brand {
+  color: #a5a5a5;
+  margin-bottom: 0px;
+  margin-top: -20px;
+}
+
+body header nav {
+  position: relative;
+}
+
+body header nav ul.nav_links {
+  list-style: none;
+}
+
+body header nav ul.nav_links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+body header .attr-nav {
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 0px;
+}
+
+body header a {
+  display: inline-block;
+  padding: 5px 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+body header .member {
+  border: 2px solid #004bb1;
+  color: #004bb1;
+}
+
+body header .login {
+  border: 2px solid #FB8C00;
+  color: #FB8C00;
+}
+
+body .inner-banner {
+  display: block;
+  background: url(/images/bg.png) no-repeat center 0;
+  height: 300px;
+}
+
+body .inner-banner .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px 0px;
+}
+
+body .inner-banner .overlay .advanced-search {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 3px;
+  outline: none;
+  max-width: 960px;
+}
+
+body .inner-banner .overlay .advanced-search .searchdiv {
+  display: table;
+  width: 100%;
+  border: 1px solid #CCCCCC;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px 19px;
+  box-sizing: border-box;
+}
+
+body .bootsnav {
+  border-radius: 0px;
+  background-color: #fff;
+  border: none;
+  border-bottom: solid 1px #e0e0e0;
+}
+
+body .bootsnav .container {
+  position: relative;
+}
+
+body .bootsnav .container .attr-nav {
+  float: right;
+}
+
+body .bootsnav .container .navbar-header {
+  float: left;
+}
+
+body .bootsnav .container .navbar-header .navbar-brand {
+  width: 260px;
+  padding: 15px 15px;
+  font-size: 30px;
+  color: #004bb1;
+  font-weight: bold;
+}
+
+body .bootsnav .container .navbar-header .sub-brand {
+  color: #a5a5a5;
+  margin-bottom: 0px;
+}
+
+body .content {
+  line-height: 1.3;
+  padding-top: 2px;
+  position: relative;
+  padding-left: 12px;
+  margin-bottom: 19px;
+}
+
+body .content .card-title {
+  color: #333333;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+body .content:before {
+  content: "";
+  width: 4px;
+  height: 25px;
+  background-color: #1A74C0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body .content:after {
+  content: "";
+  width: 4px;
+  height: 12.5px;
+  background-color: #233977;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
